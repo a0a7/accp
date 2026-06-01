@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 import tkinter as tk
+from collections.abc import Callable
 
 from acoustic_consensus.main import run_once
 
@@ -33,8 +34,7 @@ class AcousticConsensusGUI(tk.Tk):
         canvas = tk.Canvas(frame, bg=BG, highlightthickness=0)
         canvas.pack(fill="both", expand=True)
 
-        title = canvas.create_text(450, 80, text="Acoustic\nConsensus", fill=FG, font=("Helvetica", 40, "bold"))
-        _ = title
+        canvas.create_text(450, 80, text="Acoustic\nConsensus", fill=FG, font=("Helvetica", 40, "bold"))
 
         rings = [canvas.create_oval(0, 0, 0, 0, outline="#4c3ab3", width=2) for _ in range(4)]
 
@@ -61,7 +61,7 @@ class AcousticConsensusGUI(tk.Tk):
 
         self._swap(frame)
 
-    def show_transition_screen(self, next_screen: callable) -> None:
+    def show_transition_screen(self, next_screen: Callable[[], None]) -> None:
         frame = tk.Frame(self, bg=BG)
         canvas = tk.Canvas(frame, bg=BG, highlightthickness=0)
         canvas.pack(fill="both", expand=True)
@@ -136,8 +136,7 @@ class AcousticConsensusGUI(tk.Tk):
         canvas.pack(fill="both", expand=True)
 
         canvas.create_text(450, 60, text="Consensus Rounds", fill=FG, font=("Helvetica", 24, "bold"))
-        badge = canvas.create_polygon([700, 30, 860, 30, 860, 100, 745, 100, 700, 145], fill="#332c5d", outline="#9f94e0", width=2)
-        _ = badge
+        canvas.create_polygon([700, 30, 860, 30, 860, 100, 745, 100, 700, 145], fill="#332c5d", outline="#9f94e0", width=2)
         canvas.create_text(785, 70, text="Device\nLocal", fill=FG, font=("Helvetica", 12, "bold"))
 
         circles = [canvas.create_oval(180 + i * 180, 200, 280 + i * 180, 300, fill="#4b456d", outline="#aba3de", width=2) for i in range(3)]
@@ -161,7 +160,7 @@ class AcousticConsensusGUI(tk.Tk):
             if round_step < 3:
                 frame.after(900, animate, round_step + 1)
             else:
-                self.context_id = run_once(duration=0.2, rounds=1, round_seconds=0.1)
+                self.context_id = run_once(duration=0.2, rounds=3, round_seconds=0.9)
                 self.show_transition_screen(self.show_result_screen)
 
         animate()

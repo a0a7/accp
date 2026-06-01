@@ -70,5 +70,6 @@ def cosine_similarity(peaks_a: list[Peak], peaks_b: list[Peak], samplerate: int 
     vec_b = peaks_to_vector(peaks_b, samplerate)
     denom = float(np.linalg.norm(vec_a) * np.linalg.norm(vec_b))
     if denom == 0:
+        # Two empty fingerprints are treated as identical (same no-signal context).
         return 1.0 if not peaks_a and not peaks_b else 0.0
     return float(np.dot(vec_a, vec_b) / denom)

@@ -1,5 +1,5 @@
 Search repositories:
-- USPTO design patents class D14
+- USPTO design patent class D14
 - Google Patents, Espacenet
 
 Sample search terms:

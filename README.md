@@ -22,6 +22,8 @@ python -m acoustic_consensus.main
 ```
 Prints a 32-bit context ID (`00000000` means no usable context).
 
+For multi-device LAN demos, set `ACCP_LISTEN_IP=0.0.0.0` (loopback is the default for safer local-only behavior).
+
 ## Run GUI prototype
 ```bash
 python gui.py

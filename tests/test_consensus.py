@@ -28,3 +28,7 @@ def test_similarity_clustering_groups_similar_fingerprints():
     clusters = cluster_hashes_by_similarity({h1: p1, h2: p2, h3: p3}, tolerance=0.85)
     sizes = sorted(len(c) for c in clusters)
     assert sizes == [1, 2]
+    paired_cluster = next(cluster for cluster in clusters if h1 in cluster)
+    assert h2 in paired_cluster
+    isolated_cluster = next(cluster for cluster in clusters if h3 in cluster)
+    assert isolated_cluster == {h3}

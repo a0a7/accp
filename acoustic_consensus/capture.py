@@ -11,7 +11,7 @@ def record_audio(duration: float = 5.0, samplerate: int = 16000) -> tuple[np.nda
 
     The sounddevice import is deferred so tests can run without audio hardware.
     """
-    import sounddevice as sd  # pylint: disable=import-outside-toplevel
+    import sounddevice as sd
 
     samples = sd.rec(int(duration * samplerate), samplerate=samplerate, channels=1, dtype="int16")
     sd.wait()

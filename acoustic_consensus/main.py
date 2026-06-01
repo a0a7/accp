@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import threading
 import time
 import uuid
@@ -32,7 +33,8 @@ def run_once(duration: float = 5.0, rounds: int = 3, round_seconds: float = 2.0)
 
     device_id = str(uuid.uuid4())
     state = RuntimeState(known_hashes={own_hash})
-    channel = UDPBroadcastChannel()
+    # Default loopback binding minimizes exposure; set ACCP_LISTEN_IP=0.0.0.0 for multi-device LAN demos.
+    channel = UDPBroadcastChannel(listen_ip=os.getenv("ACCP_LISTEN_IP", "127.0.0.1"))
 
     stop_event = threading.Event()
 
