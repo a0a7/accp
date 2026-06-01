@@ -1,0 +1,11 @@
+Search repositories:
+- USPTO design patent class D14
+- Google Patents, Espacenet
+
+Sample search terms:
+- acoustic consensus graphical user interface
+- waveform consensus display
+- hash chain GUI
+
+Novelty rationale:
+- Specific visual sequence and shape language (hexagonal controls, constellation peaks, chain squares, hexagon context glyphs, spiral check transition) is distinct as a cohesive ornamental set.
