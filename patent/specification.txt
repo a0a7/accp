@@ -1,0 +1,13 @@
+Preamble:
+I, Alexander Weimer, claim the ornamental design for an acoustic consensus protocol graphical user interface, as shown and described.
+
+Single Claim:
+The ornamental design for a graphical user interface for an acoustic consensus protocol, as shown and described.
+
+Figure Descriptions:
+Figure 1 is a front view of a computer screen showing a first screen of the graphical user interface, the screen comprising a circular animated waveform and a hexagonal button.
+Figure 2 is a front view thereof, showing a second screen comprising a constellation-style spectral peak display and a radial progress indicator.
+Figure 3 is a front view thereof, showing a third screen comprising three circular round indicators and a chain-of-squares hash visualization.
+Figure 4 is a front view thereof, showing a fourth screen comprising a set of eight hexagonal digits and a spiral-drawn checkmark.
+Figure 5 is a front view thereof, showing a transitional screen between the first and second screens, wherein the waveform collapses into a centered dot.
+The broken line showing of the computer screen and window frame is for environmental purposes only and forms no part of the claimed design.

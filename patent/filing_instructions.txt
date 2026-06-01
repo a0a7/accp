@@ -1,0 +1,6 @@
+1. Prepare black-and-white line drawing PDFs (figures and combined set).
+2. Log into USPTO filing portal (Patent Center / EFS-Web equivalent workflow).
+3. Upload drawings and this specification text converted to PDF.
+4. Include oath/declaration PTO/AIA/01.
+5. Submit with micro-entity fees.
+6. Save filing receipt and serial number.

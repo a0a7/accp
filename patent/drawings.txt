@@ -1,0 +1,5 @@
+Figure 1: Start screen with circular waveform and hexagonal Begin button.
+Figure 2: Recording screen with radial gauge and constellation peaks.
+Figure 3: Consensus screen with 3 round circles and linked hash squares.
+Figure 4: Result screen with eight hexagonal context digits and spiral check.
+Figure 5: Transition frame where waveform collapses into centered dot.
